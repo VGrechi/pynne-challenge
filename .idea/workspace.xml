@@ -4,17 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59c08d56-c96b-416a-ba90-002610233297" name="Changes" comment="" />
+    <list default="true" id="59c08d56-c96b-416a-ba90-002610233297" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/adapter/Bank1Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/adapter/Bank2Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/adapter/BankAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/enums/TransactionTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/model/Balance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/service/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/pyyne/challenge/bank/BankServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pyyne/challenge/bank/BankController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2IuIxGFgOkWwWixw9WCcvY53Nsj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,6 +52,67 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pyyne.challenge.bank.adapter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BankServiceTest">
+    <configuration name="BankServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pynne-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pyyne.challenge.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pyyne.challenge.bank" />
+      <option name="MAIN_CLASS_NAME" value="com.pyyne.challenge.bank.BankServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankServiceTest.shouldNotReturnBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pynne-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pyyne.challenge.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pyyne.challenge.bank" />
+      <option name="MAIN_CLASS_NAME" value="com.pyyne.challenge.bank.BankServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnBalance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pynne-challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pyyne.challenge.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pyyne.challenge.bank" />
+      <option name="MAIN_CLASS_NAME" value="com.pyyne.challenge.bank.BankServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BankServiceTest" />
+        <item itemvalue="JUnit.BankServiceTest.shouldNotReturnBalance" />
+        <item itemvalue="JUnit.BankServiceTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
