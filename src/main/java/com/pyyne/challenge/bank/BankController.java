@@ -5,6 +5,7 @@ import com.bank2.integration.Bank2AccountSource;
 import com.pyyne.challenge.bank.adapter.Bank1Adapter;
 import com.pyyne.challenge.bank.adapter.Bank2Adapter;
 import com.pyyne.challenge.bank.adapter.BankAdapter;
+import com.pyyne.challenge.bank.exceptions.AdapterInitializationException;
 import com.pyyne.challenge.bank.service.BankService;
 
 import java.util.Arrays;
@@ -17,16 +18,19 @@ import java.util.List;
  */
 public class BankController {
 
-    public void printBalances() {
+    public void printBalances() throws AdapterInitializationException {
         List<BankAdapter> bankList = Arrays.asList(
                 new Bank1Adapter(new Bank1AccountSource()),
                 new Bank2Adapter(new Bank2AccountSource()));
         BankService service = new BankService(bankList);
         service.getBalancesToPrint().forEach(b -> System.out.println(b));
-        //System.out.println("Implement me to pull balance information from all available bank integrations and display them, one after the other.");
     }
 
-    public void printTransactions() {
-        System.out.println("Implement me to pull transactions from all available bank integrations and display them, one after the other.");
+    public void printTransactions() throws AdapterInitializationException {
+        List<BankAdapter> bankList = Arrays.asList(
+                new Bank1Adapter(new Bank1AccountSource()),
+                new Bank2Adapter(new Bank2AccountSource()));
+        BankService service = new BankService(bankList);
+        service.getTransactionsToPrint().forEach(t -> System.out.println(t));
     }
 }

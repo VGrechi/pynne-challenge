@@ -2,6 +2,8 @@ package com.pyyne.challenge.bank.model;
 
 import com.pyyne.challenge.bank.enums.TransactionTypeEnum;
 
+import java.util.Objects;
+
 public class Transaction {
 
     private Long bankId;
@@ -24,5 +26,13 @@ public class Transaction {
                 ", type=" + type +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Transaction that = (Transaction) o;
+        return Objects.equals(bankId, that.bankId) && Objects.equals(amount, that.amount) && type == that.type && Objects.equals(description, that.description);
     }
 }

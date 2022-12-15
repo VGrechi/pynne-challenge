@@ -1,18 +1,24 @@
 package com.pyyne.challenge.bank.adapter;
 
-import com.bank1.integration.Bank1AccountSource;
 import com.bank2.integration.Bank2AccountBalance;
 import com.bank2.integration.Bank2AccountSource;
+import com.bank2.integration.Bank2AccountTransaction;
+import com.pyyne.challenge.bank.exceptions.AdapterInitializationException;
+import com.pyyne.challenge.bank.enums.TransactionTypeEnum;
+import com.pyyne.challenge.bank.exceptions.InvalidTransactionTypeException;
 import com.pyyne.challenge.bank.model.Balance;
 import com.pyyne.challenge.bank.model.Transaction;
 
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Bank2Adapter implements BankAdapter {
+public class Bank2Adapter extends AbstractBankAdapter implements BankAdapter {
 
     private Bank2AccountSource source;
 
-    public Bank2Adapter(Bank2AccountSource source) {
+    public Bank2Adapter(Bank2AccountSource source) throws AdapterInitializationException {
+        super(source);
         this.source = source;
     }
 
@@ -25,7 +31,11 @@ public class Bank2Adapter implements BankAdapter {
 
     @Override
     public List<Transaction> getTransactions() {
-        return null;
+        long accountId = 1L;
+        List<Bank2AccountTransaction> sourceTransactions = source.getTransactions(1L, new Date(), new Date());
+        return sourceTransactions.stream()
+                .map(st -> new Transaction(2L, st.getAmount(), TransactionTypeEnum.getByLabel(String.valueOf(st.getType())), st.getText()))
+                .collect(Collectors.toList());
     }
 
 }

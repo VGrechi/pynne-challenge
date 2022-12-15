@@ -12,6 +12,18 @@ public class Balance {
         this.currency = currency;
     }
 
+    public Long getBankId() {
+        return bankId;
+    }
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
     @Override
     public String toString() {
         return "Balance{" +
